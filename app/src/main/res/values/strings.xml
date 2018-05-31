@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SuivAA</string>
+    <string name="app_name">GSB</string>
 
     <string name="err_username">Le champs E-mail est requis.</string>
     <string name="err_password">Le Mot de passe doit être d\'au moins 6 caractères.</string>

@@ -1,8 +1,13 @@
 package fr.pasco.aymeric.suivaa.network;
 
+import java.util.List;
+import java.util.Observable;
+
 import fr.pasco.aymeric.suivaa.entities.AccessToken;
-import fr.pasco.aymeric.suivaa.entities.VisitResponse;
+import fr.pasco.aymeric.suivaa.entities.Doctor;
+import fr.pasco.aymeric.suivaa.entities.Visit;
 import retrofit2.Call;
+import retrofit2.http.Body;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
@@ -18,7 +23,16 @@ public interface ApiService {
     @FormUrlEncoded
     Call<AccessToken> refresh(@Field("refresh_token") String refreshToken);
 
+    /*@GET("visits")
+    Call<VisitResponse> visits();*/
+
     @GET("visits")
-    Call<VisitResponse> visits();
+    Call<List<Visit>> getVisits();
+
+    @POST("visits")
+    Call<Visit> createVisit(@Body Visit visit);
+
+    @GET("doctors")
+    Call<List<Doctor>> getDoctors();
 
 }

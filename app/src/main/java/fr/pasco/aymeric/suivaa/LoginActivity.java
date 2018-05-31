@@ -62,9 +62,7 @@ public class LoginActivity extends AppCompatActivity {
             startActivity(new Intent(LoginActivity.this, VisitActivity.class));
             finish();
         }
-        /*service = RetrofitBuilder.createService(ApiService.class);
-        validator = new AwesomeValidation(ValidationStyle.TEXT_INPUT_LAYOUT);
-        setupRules();*/
+
     }
 
     @OnClick(R.id.btn_login)
